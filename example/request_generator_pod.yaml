@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: request-generator
+  labels:
+    name: request-generator
+spec:
+  containers:
+  - name: request-generator
+    image: dongyiyang/requestgenerator:0.1
+    command:
+      - /bin/requestgenerator
+    args:
+      - --v=3
+      - --host=http://simple-server:9090
+      - --qps=1
+  restartPolicy: Always
