@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: request-generator
-    image: dongyiyang/requestgenerator:0.1
+    image: dongyiyang/requestgenerator:latest
     command:
       - /bin/requestgenerator
     args:
